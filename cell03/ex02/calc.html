@@ -1,0 +1,63 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <!-- <h1>Basic Calculator</h1> -->
+        <form id="calculatorForm">
+            <input type="text" id="left" placeholder="Enter a number" required>
+            <select id="operator" required>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="right" placeholder="Enter a number" required>
+            <input type="submit" value="Try me!" onclick="calculate()">
+        </form>
+    </body>
+    <script>
+        
+        function alertReminder() 
+        {
+            setInterval(() => {alert('Please, use me...');}, 30000);
+        }
+
+        function calculate()
+        {
+            var left = document.getElementById("left").value;
+            const operator = document.getElementById('operator').value;
+            var right = document.getElementById('right').value;
+            const leftValue = parseInt(left);
+            const rightValue = parseInt(right);
+
+            if(leftValue < 0 || rightValue < 0)
+            {
+                alert("Error :(");
+                console.log("Error :(")
+                return;
+            }
+            if ((operator === '/' || operator === '%') && rightValue === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            var result;
+
+            if(operator == "+") result = leftValue+rightValue ;
+            else if(operator == "-") result = leftValue-rightValue ;
+            else if(operator == "*") result = leftValue*rightValue ;
+            else if(operator == "/") result = leftValue/rightValue ;
+            else if(operator == "%") result = leftValue%rightValue ;
+
+            alert(result);
+            console.log(result);
+
+        }
+
+        // document.getElementById('submit').addEventListener('click', calculate);
+        window.onload = alertReminder;
+    </script>
+</html>
