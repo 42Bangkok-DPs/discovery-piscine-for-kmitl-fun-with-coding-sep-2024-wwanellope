@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            #balloon{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-color: red;
+                cursor: pointer;
+            }
+            .container{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="balloon"></div>
+        </div>
+    </body>
+    <script>
+        const balloon = document.getElementById('balloon')
+        const color = ['red','green','blue']
+        let index = 0;
+        let size = 200;
+
+        balloon.addEventListener("click",()=>
+        {
+            size += 10;
+            if(size > 420)
+            {
+                size = 200;
+            }
+            index++;
+            if(index == 3) index = 0;
+            balloon.style.backgroundColor = color[index];
+            balloon.style.height = size;
+            balloon.style.width = size;
+        });
+
+        balloon.addEventListener("mouseout",()=>
+        {
+            index --;
+            if(index < 0) index = 2;
+            if(size > 200)
+            {
+                size -= 5;
+            }
+            balloon.style.backgroundColor = color[index];
+            balloon.style.height = size;
+            balloon.style.width = size;
+            // balloon.style.backgroundColor = "blue";
+        })
+        // balloon.addEventListener("mouseover",()=>
+        // {
+        //     balloon.style.backgroundColor = "pink";
+        // })
+    </script>
+</html>
