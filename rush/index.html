@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css"/>
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <li id="Home"><a href="index.html">Home</a></li>
+            <li id="Praewa"><a href="praewa.html">Praewa</a></li>
+            <li id="Tup"><a href="tup.html">Tup</a></li>
+        </nav>
+        <div class = "container">
+            <!-- <img src="https://pngmagic.com/product_images/Off-white-background-image.jpg" alt="Sample Image" width="100%" height="100%"> -->
+            <div class="centered-text" id="blinking-text">Hi !!</div>
+            <div class="centered-text" id="blinking-text2">Welcome to Praewa & Tup portfolio!</div>
+            <!-- <a>test</a> -->
+        </div>
+    </body>
+    <script>
+        const blinkingText = document.getElementById('blinking-text');
+        const blinkingText2 = document.getElementById('blinking-text2');
+
+        function blinkText() {
+            blinkingText.style.opacity = '0';
+            blinkingText2.style.opacity = '0';
+
+            setTimeout(() => {
+                blinkingText.style.opacity = '1';
+                blinkingText2.style.opacity = '1';
+            }, 1000);
+        }
+        setInterval(blinkText, 5000);
+        setInterval(blinkText2, 5000);
+    </script>
+</html>

@@ -1,0 +1,397 @@
+html {
+    font-size: 16px;
+    position: fixed;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    width: 15%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #a8d1e7;
+    border-radius: 0 0 5% 5%;
+    position: fixed;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mini_nav{
+    display: none;
+}
+
+#Praewa{
+    border-radius: 25px;
+    background-color: #d4a3c4;
+    height : 55px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Home , #Praewa, #Tup{
+    text-decoration: none;
+    font-size: 32px;
+    cursor: pointer;
+    color : white;
+    font-weight: bold;
+}
+
+.sub{
+    font-size: 24px;
+    color : white;
+    font-weight: bold;
+    margin: -20px 0px -20px 10px;
+    display: flex;
+    
+    flex-direction: column;
+    gap: 30px;
+}
+.sub a{
+    cursor: pointer;
+    color : white;
+    text-decoration: none;
+}
+.container{
+    width: 85%;
+    height: 100vh;
+    margin-left: 15%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 96px;
+    margin:30px 0px 10px 0px;
+    color: #3f3232;
+}
+#about_me{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#about_me img{
+    margin-top: 20px;
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #ffbfc5;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px
+}
+
+.about_me_container{
+    margin-top: 20px;
+    margin-left: -50px;
+    display: grid;
+    grid-template-columns:300px 300px 300px;
+    gap: 10%;
+    /* width: 1000px; */
+}
+.topic{
+    font-size: 32px;
+    font-weight: 600;
+    color: #d4a3c4;
+}
+.info{
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    color: #3f3232;
+}
+
+h2{
+    font-size: 52px;
+    margin:40px 0px 10px 0px;
+    color: #3f3232;
+}
+
+#experience, #contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#experience img{
+    width: 900px;
+    height: 600px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.contact_logo{
+    display: flex;
+    gap: 40px;
+    margin : 30px 0px 50px 0px;
+}
+
+.contact_logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+
+    
+    #Praewa{
+        height : 40px;
+        width: 100px;
+    }
+    #Home , #Praewa, #Tup{
+        font-size: 20px;
+    }
+    
+    .sub{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 60px;
+    }
+    #about_me img{
+        width: 250px;
+        height: 250px;
+    }
+    .about_me_container{
+        grid-template-columns:160px 160px 160px;
+    }
+    .topic{
+        font-size: 20px;
+    }
+    .info{
+        font-size: 16px;
+    }
+    
+    h2{
+        font-size: 40px;
+    }
+    
+    #experience img{
+        width: 550px;
+        height: 350px;
+    }
+    
+    .contact_logo img{
+        width: 50px;
+        height: 50px;
+    }
+    }
+
+@media (max-width: 768px) {
+html {
+    font-size: 16px;
+    position: fixed;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    width: 105%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #a8d1e7;
+    position: fixed;
+    list-style-type: none;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 0;
+}
+
+#Praewa{
+    border-radius: 25px;
+    background-color: #d4a3c4;
+    height : 45px;
+    width: 125px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Home , #Praewa, #Tup{
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+    color : white;
+    font-weight: bold;
+}
+
+.sub{
+    font-size: 24px;
+    color : white;
+    font-weight: bold;
+    margin: -20px 0px -20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    display: none;
+}
+.sub a{
+    cursor: pointer;
+    color : white;
+    text-decoration: none;
+}
+.container{
+    width: 85%;
+    height: 100vh;
+    margin-left: 8%;
+    margin-top: 20%;
+    margin-bottom: -20%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 50px;
+    margin:30px 15px 10px 0px;
+    color: #3f3232;
+}
+#about_me{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#about_me img{
+    margin-top: 20px;
+    width: 200x;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 20px;
+    border-color: #ffbfc5;
+}
+#about2{
+    margin-left: -17px;
+}
+.image{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px
+}
+
+.about_me_container{
+    margin-top: 20px;
+    margin-left: -50px;
+    display: flex;
+    /* grid-template-columns:60px 60px 60px; */
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 1000px; */
+}
+.topic{
+    font-size: 32px;
+    font-weight: 600;
+    color: #d4a3c4;
+}
+.info{
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #3f3232;
+}
+
+h2{
+    font-size: 30px;
+    margin:40px 0px 10px 0px;
+    color: #3f3232;
+}
+
+#experience, #contact{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#experience img{
+    width: 350px;
+    height: 200px;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+.contact_logo{
+    display: flex;
+    gap: 40px;
+    margin : 30px 0px 50px 0px;
+}
+
+.contact_logo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+}
+#mini_nav{
+    width: 100%;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    margin-top: 80px;
+    display: flex;
+    background-color: #b6d9eb;
+    /* border-radius: 0 0 5% 5%; */
+    position: fixed;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
+    flex-direction: row;
+}
+.sub_mini{
+    font-size: 16px;
+    color : white;
+    font-weight: bold;
+    /* margin: -20px -13% -20px 10px; */
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.sub_mini a{
+    cursor: pointer;
+    color : white;
+    text-decoration: none;
+}
+}
