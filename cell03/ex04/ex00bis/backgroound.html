@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="backgroound.css"/>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <div class="buttonContainer">
+            <button id="bgButton">Click To Change background-color</button>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $("#bgButton").click(function() {
+                var x = Math.floor(Math.random() * 256);
+                var y = Math.floor(Math.random() * 256);
+                var z = Math.floor(Math.random() * 256);
+                var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+                
+                $("body").css("background", bgColor);
+            });
+        });
+    </script>
+</html>
