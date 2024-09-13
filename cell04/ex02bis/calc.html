@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    </head>
+    <body>
+        <!-- <h1>Basic Calculator</h1> -->
+        <form id="calculatorForm">
+            <input type="text" id="left" placeholder="Enter a number" required>
+            <select id="operator" required>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" id="right" placeholder="Enter a number" required>
+            <input type="submit" value="Try me!" id="submit">
+        </form>
+    </body>
+    <script>
+        $(document).ready(function(){
+            function alertReminder() 
+            {
+                setInterval(() => {alert('Please, use me...');}, 30000);
+            }
+
+            $("#submit").click(function(){
+                var left = $("#left").val();
+                const operator = $("#operator").val();
+                var right = $("#right").val();
+
+                const leftValue = parseInt(left);
+                const rightValue = parseInt(right);
+
+                if(leftValue < 0 || rightValue < 0)
+                {
+                    alert("Error :(");
+                    console.log("Error :(")
+                    return;
+                }
+                if ((operator === '/' || operator === '%') && rightValue === 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+
+                var result;
+
+                if(operator == "+") result = leftValue+rightValue ;
+                else if(operator == "-") result = leftValue-rightValue ;
+                else if(operator == "*") result = leftValue*rightValue ;
+                else if(operator == "/") result = leftValue/rightValue ;
+                else if(operator == "%") result = leftValue%rightValue ;
+
+                alert(result);
+                console.log(result);
+            });
+            
+            alertReminder();
+         });
+        
+        
+    </script>
+</html>
