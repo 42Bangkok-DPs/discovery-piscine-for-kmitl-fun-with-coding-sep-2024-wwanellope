@@ -28,11 +28,22 @@
                 var left = $("#left").val();
                 const operator = $("#operator").val();
                 var right = $("#right").val();
+                var intRegx = /^\d+$/;
 
-                const leftValue = parseInt(left);
-                const rightValue = parseInt(right);
+                let leftValue = parseFloat(left);
+                let rightValue = parseFloat(right);
 
-                if(leftValue < 0 || rightValue < 0  || isNaN(left) || isNaN(right))
+                if(!Number.isInteger(leftValue) || !Number.isInteger(rightValue))
+                {
+                    alert("Error :(");
+                    console.log("Error :(")
+                    return;
+                }
+
+                leftValue = parseInt(left);
+                rightValue = parseInt(right);
+
+                if(leftValue < 0 || rightValue < 0 || isNaN(left) || isNaN(right))
                 {
                     alert("Error :(");
                     console.log("Error :(")
