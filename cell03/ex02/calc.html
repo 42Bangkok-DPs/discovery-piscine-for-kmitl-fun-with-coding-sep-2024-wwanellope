@@ -32,7 +32,7 @@
             const leftValue = parseInt(left);
             const rightValue = parseInt(right);
 
-            if(leftValue < 0 || rightValue < 0)
+            if(leftValue < 0 || rightValue < 0 || isNaN(left) || isNaN(right))
             {
                 alert("Error :(");
                 console.log("Error :(")
