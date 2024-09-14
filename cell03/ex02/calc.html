@@ -29,8 +29,18 @@
             var left = document.getElementById("left").value;
             const operator = document.getElementById('operator').value;
             var right = document.getElementById('right').value;
-            const leftValue = parseInt(left);
-            const rightValue = parseInt(right);
+            let leftValue = parseFloat(left);
+            let rightValue = parseFloat(right);
+
+            if(!Number.isInteger(leftValue) || !Number.isInteger(rightValue))
+            {
+                alert("Error :(");
+                console.log("Error :(")
+                return;
+            }
+
+            leftValue = parseInt(left);
+            rightValue = parseInt(right);
 
             if(leftValue < 0 || rightValue < 0 || isNaN(left) || isNaN(right))
             {
